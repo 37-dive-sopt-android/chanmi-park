@@ -32,27 +32,22 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.sopt.dive.ui.theme.DiveTheme
 
-class MainActivity : ComponentActivity() {
+class LoginActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             DiveTheme {
-                ColumnPreview(
-
+                LoginScreen(
                 )
             }
         }
     }
 }
-/*
-fun GreetingPreview(){
 
-}
-*/
 
 @Composable
-fun HeaderSection() {
+fun LoginHeaderSection() {
     var text by remember { mutableStateOf("") }
 
     Text(
@@ -67,8 +62,9 @@ fun HeaderSection() {
 }
 
 @Composable
-fun FieldSection() {
-    var text by remember { mutableStateOf("") }
+fun LoginFieldSection() {
+    var idtext by remember { mutableStateOf("") }
+    var pwtext by remember { mutableStateOf("") }
 
     Column(
         modifier = Modifier.fillMaxWidth(),
@@ -84,8 +80,8 @@ fun FieldSection() {
                 .padding(start = 10.dp)
         )
         TextField(
-            value = text,
-            onValueChange = { text = it },
+            value = idtext,
+            onValueChange = { idtext = it },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(10.dp),
@@ -103,8 +99,8 @@ fun FieldSection() {
                 .fillMaxWidth()
         )
         TextField(
-            value = text,
-            onValueChange = { text = it },
+            value = pwtext,
+            onValueChange = { pwtext = it },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(10.dp),
@@ -115,7 +111,7 @@ fun FieldSection() {
 }
 
 @Composable
-fun ButtonSection() {
+fun LoginButtonSection() {
     val context = LocalContext.current
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -157,7 +153,7 @@ fun ButtonSection() {
 
 @Preview(showBackground = true)
 @Composable
-fun ColumnPreview() {
+fun LoginScreen() {
     Column(
         modifier = Modifier
             .padding(top = 20.dp, start = 10.dp, end = 10.dp, bottom = 40.dp)
@@ -165,12 +161,8 @@ fun ColumnPreview() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceBetween
     ) {
-        HeaderSection()
-        FieldSection()
-        ButtonSection()
+        LoginHeaderSection()
+        LoginFieldSection()
+        LoginButtonSection()
     }
 }
-
-
-
-
