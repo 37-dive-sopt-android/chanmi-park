@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lesly application</string>
+    <string name="title_activity_intent">IntentActivity</string>
+    <string name="title_activity_signup.kt">Signup.kt</string>
+    <string name="title_activity_signup">SignupActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+</resources>
