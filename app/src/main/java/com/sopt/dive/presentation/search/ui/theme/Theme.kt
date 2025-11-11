@@ -1,4 +1,4 @@
-package com.sopt.dive.ui.theme
+package com.sopt.dive.presentation.search.ui.theme
 
 import android.app.Activity
 import android.os.Build
