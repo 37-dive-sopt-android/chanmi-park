@@ -1,17 +1,12 @@
-package com.sopt.dive
+package com.sopt.dive.presentation.mypage
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -21,22 +16,19 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.sopt.dive.presentation.home.HomeScreen
 import com.sopt.dive.ui.theme.DiveTheme
 
-class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            DiveTheme {
-                BottomSection()
-            }
-        }
-    }
+@Composable
+fun MypageRoute(
+    paddingValues: PaddingValues,
+) {
+    MypageScreen(paddingValues)
 }
 
-
 @Composable
-fun MainScreen(
+fun MypageScreen(
+    paddingValues: PaddingValues,
     modifier: Modifier = Modifier,
     nickname: String,
     greeting: String,
@@ -83,7 +75,7 @@ fun MainScreen(
 @Composable
 fun MyScreenPreview() {
     DiveTheme {
-        MainScreen(
+        MypageScreen(
             nickname = "lesly",
             greeting = "안녕하세요",
             userId = "chanmi",

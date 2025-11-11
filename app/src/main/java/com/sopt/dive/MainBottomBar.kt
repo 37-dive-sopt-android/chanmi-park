@@ -11,7 +11,10 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
+import com.sopt.dive.presentation.home.HomeScreen
+import com.sopt.dive.presentation.mypage.MypageScreen
+import com.sopt.dive.presentation.search.SearchScreen
+
 enum class BottomTab {
     HOME, SEARCH, MY
 }
@@ -51,7 +54,7 @@ fun BottomSection() {
             when (selectedTab) {
                 BottomTab.HOME -> HomeScreen()
                 BottomTab.SEARCH -> SearchScreen()
-                BottomTab.MY -> MainScreen(
+                BottomTab.MY -> MypageScreen(
                     nickname = "lesly",
                     greeting = "안녕하세요",
                     userId = "chanmi",
