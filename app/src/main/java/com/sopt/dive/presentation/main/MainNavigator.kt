@@ -29,11 +29,11 @@ class MainNavigator(
 
     //현재 어떤 탭에 있는지 찾아내는 변수
     val currentTab: MainNavTab?
-        @Composable get() = MainNavTab.find { tabRoute ->
-            currentDestination?.hasRoute(tabRoute::class) == true
+        @Composable get() = MainNavTab.find { tab ->
+            currentDestination?.hasRoute(tab::class) == true
         }
 
-    fun navigate(tabRoute: MainNavTab) {
+    fun navigate(tab : MainNavTab) {
         val navOptions = navOptions {
             navController.currentDestination?.route?.let {
                 popUpTo(it) {
@@ -45,11 +45,15 @@ class MainNavigator(
             restoreState = true
         }
 
-        when (tabRoute) {
+        when (tab) {
             MainNavTab.HOME -> navController.navigateToHome(navOptions)
             MainNavTab.SEARCH -> navController.navigateToSearch(navOptions)
             MainNavTab.MYPAGE -> navController.navigateToMypage(navOptions)
         }
+    }
+    @Composable
+    fun showBottomNavigator() = MainNavTab.contains {
+        currentDestination?.hasRoute(it::class) == true
     }
 }
 

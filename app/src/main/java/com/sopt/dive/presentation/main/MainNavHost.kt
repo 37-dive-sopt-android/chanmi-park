@@ -20,6 +20,7 @@ fun MainNavHost(
         startDestination = navigator.startDestination,
         modifier = modifier
     ){
+
         homeGrap(paddingValues)
         searchGrap(paddingValues)
         myPageGrap(paddingValues)

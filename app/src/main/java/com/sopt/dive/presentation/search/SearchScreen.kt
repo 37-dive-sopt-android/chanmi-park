@@ -42,11 +42,3 @@ fun SearchScreen(
         )
     }
 }
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview2() {
-    DiveTheme {
-        SearchScreen()
-    }
-}

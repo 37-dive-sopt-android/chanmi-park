@@ -18,7 +18,6 @@ import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
 import com.sopt.dive.navigation.MainTabRoute
 import com.sopt.dive.presentation.mypage.MypageRoute
-import com.sopt.dive.presentation.search.ui.theme.DiveTheme
 import kotlinx.serialization.Serializable
 
 
@@ -31,7 +30,7 @@ fun NavGraphBuilder.searchGrap(
     padding: PaddingValues
 ) {
     composable<Search> {
-        MypageRoute(padding)
+        SearchRoute(padding)
     }
 }
 

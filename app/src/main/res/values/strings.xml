@@ -13,4 +13,5 @@
     <string name="title_activity_home_navigator">HomeNavigator</string>
     <string name="title_activity_mypage_navigator">MypageNavigator</string>
     <string name="title_activity_search_navigator">SearchNavigator</string>
+    <string name="title_activity_modifier_ext">ModifierExt</string>
 </resources>

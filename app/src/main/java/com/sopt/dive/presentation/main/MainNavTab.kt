@@ -11,20 +11,24 @@ import com.sopt.dive.presentation.search.Search
 
 enum class MainNavTab(
     @DrawableRes val icon: Int,
+    val contentDescription: String,
     val route: MainTabRoute
 ){
     HOME(
         icon = R.drawable.ic_home,
+        contentDescription = "home",
         route = Home
     ),
 
     SEARCH(
         icon = R.drawable.ic_search,
+        contentDescription = "search",
         route = Search
     ),
 
     MYPAGE(
         icon = R.drawable.ic_mypage,
+        contentDescription = "mypage",
         route = Mypage
     );
 

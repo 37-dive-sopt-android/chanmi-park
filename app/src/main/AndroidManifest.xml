@@ -13,6 +13,11 @@
         android:theme="@style/Theme.Dive"
         tools:targetApi="31">
         <activity
+            android:name=".core.util.ModifierExt"
+            android:exported="false"
+            android:label="@string/title_activity_modifier_ext"
+            android:theme="@style/Theme.Dive" />
+        <activity
             android:name=".presentation.search.SearchNavigator"
             android:exported="false"
             android:label="@string/title_activity_search_navigator"

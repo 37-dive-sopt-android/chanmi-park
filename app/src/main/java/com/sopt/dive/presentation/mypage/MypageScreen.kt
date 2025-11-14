@@ -23,7 +23,14 @@ import com.sopt.dive.ui.theme.DiveTheme
 fun MypageRoute(
     paddingValues: PaddingValues,
 ) {
-    MypageScreen(paddingValues)
+    MypageScreen(
+        paddingValues,
+        nickname = "lesly",
+        greeting = "안녕하세요",
+        userId = "chanmi",
+        password = "123456",
+        amount = "0"
+    )
 }
 
 @Composable
@@ -71,16 +78,3 @@ fun MypageScreen(
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun MyScreenPreview() {
-    DiveTheme {
-        MypageScreen(
-            nickname = "lesly",
-            greeting = "안녕하세요",
-            userId = "chanmi",
-            password = "123456",
-            amount = "0"
-        )
-    }
-}
