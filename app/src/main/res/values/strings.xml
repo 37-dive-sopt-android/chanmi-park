@@ -14,4 +14,8 @@
     <string name="title_activity_mypage_navigator">MypageNavigator</string>
     <string name="title_activity_search_navigator">SearchNavigator</string>
     <string name="title_activity_modifier_ext">ModifierExt</string>
+    <string name="title_activity_mypage_dto">MypageDTO</string>
+    <string name="title_activity_mypage_detail_screen">MypageDetailScreen</string>
+    <string name="title_activity_apifactory">Apifactory</string>
+    <string name="title_activity_server">ServerActivity</string>
 </resources>
