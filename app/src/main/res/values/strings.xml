@@ -18,4 +18,6 @@
     <string name="title_activity_mypage_detail_screen">MypageDetailScreen</string>
     <string name="title_activity_apifactory">Apifactory</string>
     <string name="title_activity_server">ServerActivity</string>
+    <string name="title_activity_header_screen">HeaderScreen</string>
+    <string name="title_activity_header">Header</string>
 </resources>

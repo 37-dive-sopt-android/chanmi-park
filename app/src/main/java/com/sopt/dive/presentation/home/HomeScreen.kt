@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.sopt.dive.presentation.header.HeaderScreen
 import com.sopt.dive.ui.theme.DiveTheme
 
 
@@ -22,6 +23,7 @@ fun HomeRoute(
     paddingValues: PaddingValues,
 ) {
     HomeScreen(paddingValues)
+
 }
 
 data class Chat(val name: String, val content: String)

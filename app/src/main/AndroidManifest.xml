@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <activity
+    <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,102 +15,10 @@
         android:theme="@style/Theme.Dive"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
-        <activity
-            android:name=".Server.Apifactory"
-            android:exported="false"
-            android:label="@string/title_activity_apifactory"
-            android:theme="@style/Theme.Dive" />
-        <activity
-            android:name=".presentation.mypage.MypageDetailScreen"
-            android:exported="false"
-            android:label="@string/title_activity_mypage_detail_screen"
-            android:theme="@style/Theme.Dive" />
-        <activity
-            android:name=".Server.MypageDTO"
-            android:exported="false"
-            android:label="@string/title_activity_mypage_dto"
-            android:theme="@style/Theme.Dive" />
-        <activity
-            android:name=".core.util.ModifierExt"
-            android:exported="false"
-            android:label="@string/title_activity_modifier_ext"
-            android:theme="@style/Theme.Dive" />
-        <activity
-            android:name=".presentation.search.SearchNavigator"
-            android:exported="false"
-            android:label="@string/title_activity_search_navigator"
-            android:theme="@style/Theme.Dive" />
-        <activity
-            android:name=".presentation.mypage.MypageNavigator"
-            android:exported="false"
-            android:label="@string/title_activity_mypage_navigator"
-            android:theme="@style/Theme.Dive" />
-        <activity
-            android:name=".ui.theme.ui.theme.presentation.home.HomeNavigator"
-            android:exported="false"
-            android:label="@string/title_activity_home_navigator"
-            android:theme="@style/Theme.Dive" />
-        <activity
-            android:name=".ui.theme.ui.theme.presentation.main.MainScreen"
-            android:exported="false"
-            android:label="@string/title_activity_main_screen"
-            android:theme="@style/Theme.Dive" />
-        <activity
-            android:name=".MypageScreen"
-            android:exported="false"
-            android:label="@string/title_activity_mypage_screen"
-            android:theme="@style/Theme.Dive" />
-        <activity
-            android:name=".navigation.MainTabRoute"
-            android:exported="false"
-            android:label="@string/title_activity_main_tab_route"
-            android:theme="@style/Theme.Dive" />
-        <activity
-            android:name=".presentation.main.MainNavTab"
-            android:exported="false"
-            android:label="@string/title_activity_main_nav_tab"
-            android:theme="@style/Theme.Dive" />
-        <activity
-            android:name=".ui.theme.ui.theme.presentation.main.MainNavi"
-            android:exported="false"
-            android:label="@string/title_activity_main_navi"
-            android:theme="@style/Theme.Dive" />
-        <activity
-            android:name=".ui.theme.ui.theme.presentation.main.MainNavgator"
-            android:exported="false"
-            android:label="@string/title_activity_main_navgator"
-            android:theme="@style/Theme.Dive" />
-        <activity
-            android:name=".ui.theme.MainNavHost"
-            android:exported="false"
-            android:label="@string/title_activity_main_nav_host"
-            android:theme="@style/Theme.Dive" />
-        <activity
-            android:name=".HomeActivity"
-            android:exported="false"
-            android:label="@string/title_activity_home"
-            android:theme="@style/Theme.Dive" />
-        <activity
-            android:name=".SearchActivity"
-            android:exported="false"
-            android:label="@string/title_activity_search"
-            android:theme="@style/Theme.Dive" />
-        <activity
-            android:name=".ui.theme.BottomActivity"
-            android:exported="false"
-            android:label="@string/title_activity_bottom"
-            android:theme="@style/Theme.Dive" />
         <activity
             android:name=".presentation.main.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.Dive"/>
-
-        <activity
-            android:name=".Server.ServerActivity"
-            android:exported="true"
-            android:label="@string/title_activity_server"
+            android:label="MainActivity"
             android:theme="@style/Theme.Dive">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

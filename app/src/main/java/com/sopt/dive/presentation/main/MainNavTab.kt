@@ -34,7 +34,6 @@ enum class MainNavTab(
 
 
     companion object {
-
         @Composable
         fun find(predicate: @Composable (MainTabRoute) -> Boolean): MainNavTab? {
             return entries.find { predicate(it.route) }
