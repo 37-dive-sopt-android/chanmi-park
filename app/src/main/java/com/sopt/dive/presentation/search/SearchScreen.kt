@@ -25,11 +25,16 @@ import androidx.compose.ui.unit.dp
 import com.sopt.dive.R
 import com.sopt.dive.ui.theme.DiveTheme
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.draw.rotate
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 
 
 @Composable
@@ -47,6 +52,11 @@ fun SearchScreen(
     modifier: Modifier = Modifier,
 ) {
     var currentState by remember { mutableStateOf(CardState.back) }
+
+    val clickCountFlow = remember { MutableStateFlow(0) }
+    val clickCount by clickCountFlow.collectAsState()
+
+    val scope = rememberCoroutineScope()
 
     val animateFloat by animateFloatAsState(
         targetValue = when(currentState) {
@@ -71,59 +81,47 @@ fun SearchScreen(
 
         animationButton(
             onClick = {
-                currentState =
-                    if (currentState == CardState.back) CardState.front
-                    else CardState.back
+                scope.launch {
+                    //코루틴 여기 적용했어요
+                    kotlinx.coroutines.delay(300)
+                    currentState =
+                        if (currentState == CardState.back) CardState.front
+                        else CardState.back
+                    //flow 여기 적용했어요
+                    clickCountFlow.update { it + 1 }
+                }
+
             },
         )
 
+        Spacer(modifier = Modifier.height(16.dp))
 
+        Text(text = "버튼 클릭 횟수: $clickCount")
     }
 }
-//@Composable
-//private fun animationImage(
-//    animation: Float,
-//    currentState: CardState,
-//    modifier: Modifier = Modifier
-//){
-//
-//    val currentImage =
-//        if (currentState == CardState.back) R.drawable.img_playingcard_back
-//        else R.drawable.img_playingcard_front
-//
-//    Box(
-//        modifier = modifier
-//            .fillMaxWidth()
-//            .padding(horizontal = 20.dp)
-//    ){
-//        Image(
-//            painter = painterResource(currentImage),
-//            contentDescription = "플레잉카드",
-//            modifier = Modifier
-//                .fillMaxWidth()
-//                .rotate(animation),
-//            contentScale = ContentScale.Crop,
-//        )
-//    }
-//}
-
 @Composable
 private fun animationImage(
     animation: Float,
     currentState: CardState,
     modifier: Modifier = Modifier
 ){
+
+    val currentImage =
+        if (currentState == CardState.back) R.drawable.img_playingcard_back
+        else R.drawable.img_playingcard_front
+
     Box(
         modifier = modifier
             .fillMaxWidth()
             .padding(horizontal = 20.dp)
-            .height(200.dp)
     ){
-        // 임시로 색 박스만
-        Box(
+        Image(
+            painter = painterResource(currentImage),
+            contentDescription = "플레잉카드",
             modifier = Modifier
-                .fillMaxSize()
-                .rotate(animation)
+                .fillMaxWidth()
+                .rotate(animation),
+            contentScale = ContentScale.Crop,
         )
     }
 }
