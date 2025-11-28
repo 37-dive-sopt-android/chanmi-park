@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">dive</string>
+    <string name="title_activity_bottom">BottomActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_main_nav_host">MainNavHost</string>
+    <string name="title_activity_main_navgator">MainNavgator</string>
+    <string name="title_activity_main_navi">MainNavi</string>
+    <string name="title_activity_main_nav_tab">MainNavTab</string>
+    <string name="title_activity_main_tab_route">MainTabRoute</string>
+    <string name="title_activity_mypage_screen">MypageScreen</string>
+    <string name="title_activity_main_screen">MainScreen</string>
+    <string name="title_activity_home_navigator">HomeNavigator</string>
+    <string name="title_activity_mypage_navigator">MypageNavigator</string>
+    <string name="title_activity_search_navigator">SearchNavigator</string>
+    <string name="title_activity_modifier_ext">ModifierExt</string>
+    <string name="title_activity_mypage_dto">MypageDTO</string>
+    <string name="title_activity_mypage_detail_screen">MypageDetailScreen</string>
+    <string name="title_activity_apifactory">Apifactory</string>
+    <string name="title_activity_server">ServerActivity</string>
+    <string name="title_activity_header_screen">HeaderScreen</string>
+    <string name="title_activity_header">Header</string>
 </resources>
